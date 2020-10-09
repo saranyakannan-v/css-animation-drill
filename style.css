@@ -4,3 +4,25 @@
     margin: 300px;
     margin-top: 50px;
 }
+
+#hero {
+    border: 1px dashed red;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    animation: myfirst;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+}
+
+@keyframes myfirst {
+    from {
+        left: 20px;
+    }
+    to {
+        right: 500px;
+    }
+}
