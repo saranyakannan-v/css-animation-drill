@@ -5,24 +5,65 @@
     margin-top: 50px;
 }
 
+
+/*overall animation effects in 17seconds*/
+
 #hero {
-    border: 1px dashed red;
-    position: relative;
     top: 20px;
     left: 20px;
     width: 100px;
     height: 100px;
-    animation: myfirst;
-    animation-duration: 5s;
-    animation-direction: normal;
-    animation-iteration-count: 1;
+    animation: myfirst 17s linear alternate;
+    border: 1px dashed red;
+    position: relative;
 }
 
+
+/*use keyframe the animation will gradually change from the current style to the new style at certain times.*/
+
 @keyframes myfirst {
-    from {
+    0% {
         left: 20px;
+        top: 20px;
     }
-    to {
-        right: 500px;
+    20% {
+        left: 480px;
+        top: 20px;
+    }
+    30% {
+        left: 480px;
+        top: 180px;
+        transform: rotate(0deg);
+    }
+    40% {
+        left: 250px;
+        top: 180px;
+        border: 1px dashed red;
+        transform: rotate(45deg);
+    }
+    55% {
+        left: 250px;
+        top: 180px;
+        border: dashed red 1px;
+        transform: rotate(45deg);
+    }
+    70% {
+        left: 20px;
+        top: 184px;
+        width: 100px;
+        height: 100px;
+        border: dashed #0900BD 1px;
+        border-radius: 0%;
+        background: transparent;
+        transform: rotate(0deg);
+    }
+    100% {
+        left: 422px;
+        top: 421px;
+        width: 150px;
+        height: 150px;
+        border: solid darkorange 1px;
+        border-radius: 50%;
+        background: radial-gradient(darkorange, orange);
     }
 }
