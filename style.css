@@ -13,7 +13,11 @@
     left: 20px;
     width: 100px;
     height: 100px;
-    animation: myfirst 17s linear alternate;
+    animation: myfirst;
+    animation-duration: 17s;
+    animation-direction: alternate;
+    /*animation with the same speed from beginning to end*/
+    animation-timing-function: linear;
     border: 1px dashed red;
     position: relative;
 }
