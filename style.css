@@ -9,6 +9,7 @@
 /*overall animation effects in 17seconds*/
 
 #hero {
+    position: relative;
     top: 20px;
     left: 20px;
     width: 100px;
@@ -19,51 +20,60 @@
     /*animation with the same speed from beginning to end*/
     animation-timing-function: linear;
     border: 1px dashed red;
-    position: relative;
 }
 
 
 /*use keyframe the animation will gradually change from the current style to the new style at certain times.*/
+
+
+/*calculation: @keyframessector = (particular sec / overall sec *100)*/
+
+
+/*5 sec - 29.4
+2 sec - 41.7
+0.2 sec - 44.1
+2 sec - 55.88
+2.5 sec - 70.59*/
 
 @keyframes myfirst {
     0% {
         left: 20px;
         top: 20px;
     }
-    20% {
+    29.4% {
         left: 480px;
         top: 20px;
     }
-    30% {
+    41.7% {
         left: 480px;
         top: 180px;
         transform: rotate(0deg);
     }
-    40% {
+    44.1% {
         left: 250px;
         top: 180px;
         border: 1px dashed red;
         transform: rotate(45deg);
     }
-    55% {
+    55.8% {
         left: 250px;
         top: 180px;
         border: dashed red 1px;
         transform: rotate(45deg);
     }
-    70% {
+    70.59% {
         left: 20px;
-        top: 184px;
+        top: 180px;
         width: 100px;
         height: 100px;
         border: dashed #0900BD 1px;
-        border-radius: 0%;
         background: transparent;
+        border-radius: 0%;
         transform: rotate(0deg);
     }
     100% {
-        left: 422px;
-        top: 421px;
+        left: 420px;
+        top: 420px;
         width: 150px;
         height: 150px;
         border: solid darkorange 1px;
